@@ -1,0 +1,93 @@
+*,*::after,*::before{
+padding: 0;
+margin: 0;
+box-sizing: border-box;}
+body{
+display:grid;
+grid-template-areas:"head head head"
+"emty banner emty""emty contant emty";
+grid-template-columns:minmax(3,1fr);
+grid-template-rows:minmax(3,1fr);}
+/*nav section */
+nav{
+grid-area:"head";   
+width: 100%;
+height:4em; background-color:lightblue;}
+nav ul {
+list-style:none;
+display:flex;
+font-size: 1.5em;
+justify-content: space-evenly;
+align-items: center;
+flex-wrap: wrap; padding-right:5px;}
+nav ul a{
+text-decoration: none;
+color: black;position: relative;
+}
+.logo {
+font-size:2em;
+text-decoration:none;
+color:brown;
+letter-spacing: 0.5ch; 
+padding:0px 5px;}
+nav ul li p:hover{font-size: 1.5em;}
+/*hero section */
+.hero{
+height: 30vw;
+width: 100%;
+background-color:lightblue;
+justify-items: center;
+justify-content: center;
+align-items: center;
+align-content: center;
+display: flex;
+grid-area: "banner";}
+
+.hero-head{
+justify-content: center;
+align-items: center;
+animation-name:slidin;
+animation-duration:1500ms;
+}
+.hero-logo{
+color:brown;
+letter-spacing: 0.3em;
+}
+@keyframes slidin{
+0%{letter-spacing: 10em;}
+100%{letter-spacing: 0em;}    
+}
+/*here content section*/
+.box-one{background-color:lightblue;
+height:100%;display:flex;
+justify-content:space-evenly;
+width: 100%; overflow:hidden;
+flex-direction:column;
+gap: 3rem;
+align-items:center; 
+flex-wrap:wrap;
+grid-area:"contant";} 
+.cards{
+height: 300px;
+width: 180px;
+background-color:rgb(231, 165, 231);
+filter: drop-shadow(-3px 7px 5px);
+aspect-ratio: 16/7;
+perspective: 600px;
+border-radius: 2vmax;
+align-content: center;
+display: flex;
+justify-content: center;
+flex-direction: column;
+padding:1em 1em;}
+
+.rows{
+display:flex;
+justify-content: center;
+justify-content:space-evenly;
+align-items:center ;
+padding: auto 40px;
+text-align: center;
+}
+
+.text{order:2;}
